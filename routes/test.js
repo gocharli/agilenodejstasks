@@ -19,7 +19,7 @@ router.get('/getChecklistItems/:id', task2);
 
 
 /// 3- get task comments by taskid
-router.get('/getTasksComments', task3);
+router.get('/getTasksComments/:id', task3);
 
 
 /// 4 - Get checklist comments by checklist id

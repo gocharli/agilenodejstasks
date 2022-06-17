@@ -45,7 +45,7 @@ exports.task2 =  async (req, res) => {
 exports.task3 = async (req, res) => {
     try {
 
-      const result = await con.query(`SELECT * from tbltask_comments INNER JOIN tbltasks ON  tbltask_comments.taskid = tbltasks.id`);
+      const result = await con.query(`SELECT * from tbltask_comments INNER JOIN tbltasks ON  tbltask_comments.taskid = tbltasks.id WHERE tbltask_comments.taskid = ${req.params.id}`);
       res.status(200).send(result[0])
 
     } catch (err) {
